@@ -1,0 +1,63 @@
+---
+title: "Analise dados da RAIS"
+description: |
+  Essa análise teve como objetivo analisar os salários na base RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R
+author:
+  - name: Vanessa Escolano Maso
+    url: {}
+date: 2021-12-10
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Nesse relatório estamos interessados em responder à pergunta:
+
+"Quanto ganha um cientista de dados?"
+
+Para isso vamos utilizar a base da RAIS anonimizada
+
+# Acessando os dados da RAIS
+
+Vamos utilizar [o datalake da iniciativa base dos dados](https://basedosdados.org/dataset/br-me-rais).
+
+```{r message=FALSE, warning=FALSE}
+library(bigrquery)
+library(dplyr)
+```
+
+```{r, cache=TRUE}
+# como eu faço se uso um SGBD (robô que processa e me envia dados)
+# cria conexão
+# o nome do billing deve ser igual ao ID do projeto no google cloud,
+# e não igual ao nome do projeto. Meu projeto tem nome semana-data-science 
+# e ID semana-data-science-334601
+# cache = TRUE faz com que a gente não gaste nosso limite do google cloud cada vez que a gente clicar em knit, se for igual ao que a gente carregou antes
+conexao <- dbConnect(
+  bigquery(),
+  project = "basedosdados",
+  dataset = "br_me_rais",
+  billing = "semana-data-science-334601"
+)
+
+# traz todas as colunas do banco de dados, everything
+# traz as 5 primeiras linhas, 5
+primeiras_cinco_linhas <- head(select(tbl(conexao, "microdados_vinculos"),
+            everything()), 5) 
+
+primeiras_cinco_linhas
+```
+
+Abaixo está o código que carrega as primeiras 5 linhas da tabela de microdados.
+
+```{r}
+# como eu faria se fosse ler de um arquivo
+tabela_normal <- read.csv("https://raw.githubusercontent.com/curso-r/main-r4ds-1/master/dados/imdb.csv")
+  
+head(tabela_normal, n = 5)
+```
