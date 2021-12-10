@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2021-12-10-anlise-da-base-rais/",
-    "title": "AnÃ¡lise da base RAIS",
+    "title": "Análise da base RAIS",
     "description": "Análise dos salários na base da RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R.",
     "author": [
       {
@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\r\nEsse é o meu primeiro projeto no portfólio.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-12-10T09:53:58-03:00",
+    "last_modified": "2021-12-10T10:07:25-03:00",
     "input_file": "anlise-da-base-rais.knit.md"
   },
   {

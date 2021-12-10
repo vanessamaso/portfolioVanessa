@@ -1,5 +1,5 @@
 ---
-title: "AnÃ¡lise da base RAIS"
+title: "Análise da base RAIS"
 description: |
   Análise dos salários na base da RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R.
 author:
