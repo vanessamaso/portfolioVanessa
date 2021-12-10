@@ -10,11 +10,78 @@ output:
     self_contained: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Esse é o meu primeiro projeto no portfólio.
+*Esse* é o meu **primeiro projeto** no [portfólio]{.ul}.
 
+~~Riscar um texto~~
 
+Formatar um texto como código: `usethis::use_git()`
+
+Como colocar um link? [Blog da Curso-R](https://curso-r.com/)
+
+Nomear pessoas que estão aqui:
+
+## Listas
+
+### Lista não numerada
+
+-   Beatriz
+    - Professora
+-   Julio
+-   Fernando
+-   Tereza
+
+### Lista numerada
+
+1.  Beatriz
+2.  Julio
+3.  Fernando
+4.  Tereza
+
+## Imagens
+
+The link is from Curso R post. I got it clicking on right button of the mouse and clicking on copy image address
+
+![Meme do Drake](https://blog.curso-r.com/images/posts/banner/API-drake.jpeg)
+
+## Código em R
+
+```{r echo=TRUE}
+# aqui a gente coloca o código
+1 + 1
+```
+
+Criamos um campo de código!
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+## Tabela:
+
+```{r}
+# Kable formata a tabela
+# Não colocar tabela inteira caso ela seja grande 
+knitr::kable(mtcars)
+```
+
+## Imagem/gráfico:
+
+```{r, out.width="90%", fig.align='center', dpi=300, layout="l-body-outset", fig.cap="Grafico da base mtcars"}
+# out.width é a porcentagem da largura que essa imagem vai ocupar
+# na página do blog
+# dpi = 300 torna a imagem de boa qualidade
+# layout escolhe o layout
+# fig.align decide qual será o alinhamento da figura
+# fig.cap coloca a legenda do gráfico
+plot(mtcars$mpg, mtcars$hp)
+```
+
+## Código em linha
+
+Melhor colocar código inline para o valor atualizar automaticamente. Colocar só valores pequenos, exemplo, sumarização por média. Não colocar códigos inteiros aqui. Criar um chunk e nele criar um objeto com o valor da média e no código in line apenas mostrar o objeto que tem essa média.
+
+Hoje é o dia `r Sys.Date()`.
