@@ -22,15 +22,15 @@
     "description": "Welcome to our new blog, Portfolio Vanessa Maso. We hope you enjoy \nreading what we have to say!",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Vanessa Escolano Maso",
+        "url": {}
       }
     ],
     "date": "2021-12-09",
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-12-09T13:34:48-03:00",
-    "input_file": {}
+    "last_modified": "2021-12-10T10:13:46-03:00",
+    "input_file": "welcome.knit.md"
   }
 ]
