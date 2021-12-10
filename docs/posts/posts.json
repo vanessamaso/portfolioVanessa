@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-12-10-anlise-da-base-rais/",
+    "title": "AnÃ¡lise da base RAIS",
+    "description": "Análise dos salários na base da RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R.",
+    "author": [
+      {
+        "name": "Vanessa Escolano Maso",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-10",
+    "categories": [],
+    "contents": "\r\nEsse é o meu primeiro projeto no portfólio.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-12-10T09:53:58-03:00",
+    "input_file": "anlise-da-base-rais.knit.md"
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to Portfolio Vanessa Maso",
     "description": "Welcome to our new blog, Portfolio Vanessa Maso. We hope you enjoy \nreading what we have to say!",
