@@ -32,6 +32,9 @@ library(dplyr)
 ```
 
 ```{r, cache=TRUE}
+# faz a autenticação no google cloud
+bigrquery::bq_auth("vanessa.escolano.maso@gmail.com")
+
 # como eu faço se uso um SGBD (robô que processa e me envia dados)
 # cria conexão
 # o nome do billing deve ser igual ao ID do projeto no google cloud,
@@ -47,9 +50,11 @@ conexao <- dbConnect(
 
 # traz todas as colunas do banco de dados, everything
 # traz as 5 primeiras linhas, 5
+# guarda o resultado no objeto primeiras_cinco_linhas
 primeiras_cinco_linhas <- head(select(tbl(conexao, "microdados_vinculos"),
             everything()), 5) 
 
+# imprime o objeto primeiras_cinco_linhas no relatório
 primeiras_cinco_linhas
 ```
 
